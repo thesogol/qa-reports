@@ -1,0 +1,25 @@
+name: Delete Old Reports
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # runs every hour
+  workflow_dispatch:
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Delete test reports older than 48 hours
+        run: |
+          find . -name "test-report-2025-*.html" -type f -mmin +2880 -delete
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add -A
+          git commit -m "Remove old test reports (older than 48h)" || echo "No changes to commit"
+          git push
