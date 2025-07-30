@@ -1,49 +1,28 @@
-name: Delete old test reports
+name: Cleanup Old Test Reports
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # Runs daily at midnight UTC
+    - cron: '0 1 * * *'  # Every day at 01:00 UTC
+  workflow_dispatch:  # Also runnable manually
 
 jobs:
-  cleanup:
+  delete-old-reports:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
 
-      - name: Delete reports older than 2 days
+      - name: Delete files older than 2 days
         run: |
-          today=$(date -u +%s)
-          deleted_any=false
-          
-          for file in *.html; do
-            if [[ "$file" == test-report-* ]]; then
-              file_date=$(echo "$file" | cut -d '-' -f 3 | cut -c1-10)
-              file_timestamp=$(date -d "$file_date" +%s || true)
+          find test-reports/ -type f -name "*.html" -mtime +2 -delete
 
-              # if parsing date fails, skip
-              if [[ -z "$file_timestamp" ]]; then
-                echo "Could not parse date from $file"
-                continue
-              fi
-
-              age=$(( (today - file_timestamp) / 86400 ))
-              echo "$file is $age days old"
-
-              if [[ $age -gt 2 ]]; then
-                git rm "$file"
-                echo "Deleted $file"
-                deleted_any=true
-              fi
-            fi
-          done
-
-          if [ "$deleted_any" = true ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "actions@github.com"
-            git commit -m "Delete old test reports"
-            git push
-          else
-            echo "No old files to delete"
-          fi
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add -A
+          git commit -m "Cleanup old reports" || echo "No changes to commit"
+          git push
