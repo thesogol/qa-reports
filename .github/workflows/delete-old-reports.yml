@@ -1,25 +1,49 @@
-name: Delete Old Reports
+name: Delete old test reports
 
 on:
-  schedule:
-    - cron: '0 * * * *'  # runs every hour
   workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight UTC
 
 jobs:
   cleanup:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Delete test reports older than 48 hours
+      - name: Delete reports older than 2 days
         run: |
-          find . -name "test-report-2025-*.html" -type f -mmin +2880 -delete
+          today=$(date -u +%s)
+          deleted_any=false
+          
+          for file in *.html; do
+            if [[ "$file" == test-report-* ]]; then
+              file_date=$(echo "$file" | cut -d '-' -f 3 | cut -c1-10)
+              file_timestamp=$(date -d "$file_date" +%s || true)
 
-      - name: Commit and push changes
-        run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "GitHub Actions"
-          git add -A
-          git commit -m "Remove old test reports (older than 48h)" || echo "No changes to commit"
-          git push
+              # if parsing date fails, skip
+              if [[ -z "$file_timestamp" ]]; then
+                echo "Could not parse date from $file"
+                continue
+              fi
+
+              age=$(( (today - file_timestamp) / 86400 ))
+              echo "$file is $age days old"
+
+              if [[ $age -gt 2 ]]; then
+                git rm "$file"
+                echo "Deleted $file"
+                deleted_any=true
+              fi
+            fi
+          done
+
+          if [ "$deleted_any" = true ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "actions@github.com"
+            git commit -m "Delete old test reports"
+            git push
+          else
+            echo "No old files to delete"
+          fi
