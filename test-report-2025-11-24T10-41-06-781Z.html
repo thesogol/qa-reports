@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>gRPC API Test Report - Build 1396</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f0f0f0; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header { background: #007bff; color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px; text-align: center; }
+        .stats { display: flex; justify-content: space-around; margin-bottom: 20px; }
+        .stat { text-align: center; padding: 10px; }
+        .stat-number { font-size: 2em; font-weight: bold; }
+        .passed { color: #28a745; }
+        .failed { color: #dc3545; }
+        .total { color: #007bff; }
+        .test-item { padding: 8px; margin: 5px 0; border-radius: 4px; }
+        .test-item.passed { background: #d4edda; border-left: 4px solid #28a745; }
+        .test-item.failed { background: #f8d7da; border-left: 4px solid #dc3545; }
+        .download-info { background: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        .download-btn { background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin: 10px 5px; }
+        .download-btn:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="download-info">
+            <strong>📥 How to view this report:</strong><br>
+            If you see this as plain text, follow these steps:<br>
+            1. Right-click this page and select "Save As"<br>
+            2. Save the file with <strong>.html</strong> extension<br>
+            3. Double-click the saved file to open in your browser<br>
+            <br>
+            <button class="download-btn" onclick="downloadFile()">📥 Download as HTML File</button>
+            <button class="download-btn" onclick="copyToClipboard()">📋 Copy HTML Content</button>
+        </div>
+        
+        <div class="header">
+            <h1>gRPC API Test Report</h1>
+            <p>Build: 1396 | Branch: main | 11/24/2025, 10:41:06 AM</p>
+        </div>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number total">363</div>
+                <div>Total</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number passed">363</div>
+                <div>Passed</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number failed">0</div>
+                <div>Failed</div>
+            </div>
+        </div>
+        
+        
+        
+        <h3>✅ Passed Tests (363)</h3>
+        
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetUnifiedMapExperiences (28 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Cache Test: Cached request is faster than original</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Cache Test: Cached response is similar to original</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Cache Test: Slightly shifted bbox returns similar results</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 10: Each POI has a valid priority number</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 11: Each POI has availability status</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 12: Each POI has location coordinates</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 13: Each POI has valid longitude (-180 to +180)</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 14: Each POI has valid latitude (-90 to +90)</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 15: Each POI has complete price information</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 16: Each POI has valid price amount</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 17: Each POI has valid currency code (3 letters)</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 18: Each POI has per-person pricing flag</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 19: Response has correct structure</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 5s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 20: All POIs have consistent data types</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 21: All coordinates are within valid geographic bounds</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 22: All ratings are reasonable (0-10)</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 23: All priorities are reasonable positive numbers</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 24: All price amounts are valid</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 25: Response contains valid POI data</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: Response contains POIs list</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: POIs list is an array</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: POIs list is not empty</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 6: Each POI has all required fields</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 7: Each POI has a valid external ID</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 8: Each POI has a valid type</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 9: Each POI has a valid rating (0-10)</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 UpdateBookingAttemptNoParticipant (5 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is 0</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 7 seconds</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: Response body is an object</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: availabilityStatus is equal AVAILABILITY_STATUS_AVAILABLE</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: Ensure no error message in the response</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 UpdateBookingAttemptNoPointParticipant (5 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is 0</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 7 seconds</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: Response body is an object</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: availabilityStatus is equal AVAILABILITY_STATUS_AVAILABLE</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: Ensure no error message in the response</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 UpdateBookingAttemptWithPointParticipant (5 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is 0</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 7 seconds</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: Response body is an object</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: availabilityStatus is equal AVAILABILITY_STATUS_AVAILABLE</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: Ensure no error message in the response</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 UpdateBookingAttempt (5 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is 0</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 7 seconds</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: Response body is an object</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: availabilityStatus is equal AVAILABILITY_STATUS_AVAILABLE</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: Ensure no error message in the response</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetExperiences (46 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 10: Experience has a valid Rating Average</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 11: Experience has a valid Rating Count</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 12: Ticket type is one of the expected values</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 13: Experience has a Duration</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 14: Duration object contains required properties</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 15: Experience has a valid Lowest Price</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 16: Experience has Free Cancellation</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 17: Experience has Nearest Pickup or Start</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 18: Validate nearestPickupOrStart structure</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 19: Response contains Favorite Tags</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 4s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 20: Response contains Filter Tag Groups</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 21: Response contains Price Histogram</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 22: Response contains Distance Histogram</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 23: Distance Histogram contains required properties</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 24: Favorite Tags contain experience count</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 25: Price Histogram Bins have valid properties</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 26: Response contains 'limit' property</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 27: Response contains 'offset' property</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 28: Response contains 'totalCount' property</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 29: Response contains 'totalMaxPrice' property</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: Response includes Experiences</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 30: Response contains 'totalMinPrice' property</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 31: Response contains 'geoId' property</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 32: Response contains 'geoName' property</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 33: favoriteTags is a non-empty array</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 34: Each favoriteTag has a tag object</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 35: tag object includes required keys</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 36: tag.id is a number</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 37: tag.description is a string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 38: tag.type is a string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 39: tag.iconUrl is a string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: Aggregator ID is a non-empty string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 40: isSelected is a boolean</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 41: experiencesCount is a number</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 42: basePrice exists and is a number</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 43: effectivePrice exists, is ≥ 0, and equals basePrice</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 44: maxSpendablePoints.amount and amountCash are exactly 0</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 45: awardedPoints has amount and amountCash as numbers</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 46: at least one experience contains lowestPriceDetails</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: Experience ID is a valid string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 6: Experience has a valid Title</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 7: Experience has a Cover Image</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 8: Cover Image is an Object</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 9: Cover Image contains required properties</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetWidget (12 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 10: 'widget_version' is a string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 11: 'widget_group' is a string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 12: 'search_result_url' is a string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 7 seconds</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: Response contains 'widget' property</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: 'experiences' is an array</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: 'experiences' is NOT empty</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 6: 'widget_id' is a valid UUID</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 7: 'widgetType' is 'WIDGET_TYPE_RECOMMENDER'</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 8: Validate root-level fields (limit, offset, totalCount)</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 9: Validate widget title is non-empty</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetPopularDestinations (10 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 10: Each destination name has expected static levelName</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 5s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: 'destinations' is an array with ≤ 10 items</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: Returned destination names match expected</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: Each destination has base.id, name, and levelName</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 6: 'cloudinaryId' is a valid image path</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 7: Parent (if present) has id, name, and levelName</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 8: 'coverImage' is null for all destinations</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 9: Validate root pagination fields</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GeoEntitiesExperiencesInfo (5 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 5s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: 'experiencesInfos' is an array with items</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: Each item has 'geoId', 'experienceCount', and 'lowestPrice'</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: No duplicate 'geoId' values</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetGeoEntityByPoint (6 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 5s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: Response contains location info</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: 'entity.base' contains id, name, and levelName</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: 'entity.parent' contains id and name if present</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 6: cloudinaryId is a valid image path</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 FindGeoEntitiesByName (4 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 5s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: Response contains 'entities' as a non-empty array</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: Each entity contains 'geo_entity.base' with id, name, level_name</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 getData (7 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 5s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: User object is present</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: User object includes optional fields with correct types</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: Status is STATUS_OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 6: Email matches expected</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 7: User ID is present and valid</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetPointsInfo (5 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 5s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: is_point_participant is boolean</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: max_usable_points is a numeric string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: max_usable_points_euro is numeric</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetWishlistedExperienceIDs (3 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 5s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: experienceIds is an array</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetLastSearches (3 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 5s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: last_searches is a non-empty array</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 AddToWishlist (5 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 5s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: wishlistItemId is present</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: wishlistItemId is a number</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: wishlistItemId is greater than 0 and stored</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetWishlistItem (4 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 5s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: Wishlist object is present</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: Wishlist ID matches the one from AddToWishlist</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 RemoveFromWishlist (4 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 5s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: Response is empty object</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: Response contains no error</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetPaymentData (5 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 5s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: credit_cards is an array</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: Each credit card has short_number, token, and type</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: Status is STATUS_OK</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetExperience (62 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 10: Aggregator ID should be a non-empty string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 11: Experience ID should match stored ID</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 12: Ticket type is one of the expected values</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 13: Bookable items should include datetime in correct format</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 14: Option Id should be a string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 15: Total Price should be a number</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 16: Booking Data should be a string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 17: Date Only should be a boolean</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 18: ExperienceId matches the one sent</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 19: PricingDetails is an array</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 4s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 20: includedServices and excludedServices are arrays</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 21: 'languages' is an array</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 22: 'id' in options is a string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 23: 'name' in options is a string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 24: 'duration' in options is an object</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 25: 'duration.from' is a number</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 26: 'duration.to' is a number</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 27: 'duration.unstructured_description' is a string if present</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 28: 'pickupIncluded' is a boolean</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 29: 'description' in options is a string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: Response contains 'experience' property</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 30: Start point address has 'administrative_area' string or null</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 31: Start point address has 'state' as string or null</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 32: Start point address has 'country' as string or null</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 33: Start point address has 'countryCode' as string or null</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 34: Start point address has 'postcode' as string or null</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 35: Start point address has 'city' as string or null</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 36: Start point address has 'formattedAddress' as string or null</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 37: Start point geoPoint has 'longitude' as number or null</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 38: Start point geoPoint has 'latitude' as number or null</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 39: End point address has 'street' as string or null</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: Response contains 'images' property and it's not empty</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 40: End point address has 'administrativeArea' as string or null</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 41: End point address has 'state' as string or null</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 42: End point address has 'country' as string or null</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 43: End point address has 'countryCode' as string or null</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 44: End point address has 'postcode' as string or null</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 45: End point address has 'city' as string or null</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 46: End point address has 'formattedAddress' as string or null</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 47: End point geoPoint has 'longitude' as number or null</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 48: End point geoPoint has 'latitude' as number or null</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 49: Review stats are valid</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: Response contains 'experience_id' property and it's a string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 50: Operator object contains valid fields</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 51: availablePickupOptions fields are valid</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 52: Highlights is an array</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 53: Badges and iconBadges are arrays</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 54: Redemption and pickup points are arrays</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 55: imageBadge is null or object</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 56: shortDescription is a non-empty string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 57: ExperienceId matches the one used in request</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 58: Experience ID matches the requested one</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 59: basePrice exists and is a number</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 6: Image URLs end with valid file extensions</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 60: effectivePrice is valid and equals basePrice</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 61: maxSpendablePoints must be 0</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 62: awardedPoints has valid amount and amountCash</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 7: Title should be a non-empty string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 8: Description should be a non-empty string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 9: 'Free cancellation' should be a boolean</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetBookableItems (8 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 5s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: Response contains 'bookable_items' array</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: If present, bookable_items have required fields</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: basePrice exists and is a number</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 6: effectivePrice is valid and equals basePrice</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 7: maxSpendablePoints must be exactly 0</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 8: awardedPoints has valid amount and amountCash</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 CheckAvailability (4 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 4s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: Property 'available' is a boolean</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: Property 'totalPrice' is a positive number</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 ShortURLExpireAtUnderWeek (10 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 5s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: Response includes short URL</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: Short URL is a non-empty string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: Short URL is a valid URL format</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5.1: Short URL contains /erl/ path</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5.2: Short URL has valid domain</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5.3: Short URL token is alphanumeric</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 6: Response includes expire_at</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 7: expire_at in response is approximately a week from today</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 ShortURLWithoutExpireAt (10 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 5s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: Response includes short URL</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: Short URL is a non-empty string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: Short URL is a valid URL format</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5.1: Short URL contains /erl/ path</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5.2: Short URL has valid domain</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5.3: Short URL token is alphanumeric</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 6: Response includes expire_at</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 7: expire_at in response is approximately a month from today</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 ShortURLExpireAtAfterWeek (10 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 5s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: Response includes short URL</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: Short URL is a non-empty string</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: Short URL is a valid URL format</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5.1: Short URL contains /erl/ path</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5.2: Short URL has valid domain</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5.3: Short URL token is alphanumeric</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 6: Response includes expire_at</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 7: expire_at in response matches request expire_at</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 CreateBookingAttempt (4 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 10 seconds</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: 'id' property exists and matches UUID format</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: 'status' property is a non-empty string</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetExperiencesNoParticipant (5 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: effectivePrice is ≥ 0 and equals basePrice</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: maxSpendablePoints.amount and amountCash are exactly 0</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: awardedPoints has amount and amountCash as numbers</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: At least one experience contains lowestPriceDetails</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetExperienceNoParticipant (5 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: basePrice exists and is a number</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: effectivePrice is ≥ 0 and equals basePrice</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: maxSpendablePoints.amount and amountCash are exactly 0</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: awardedPoints.amount and amountCash are numbers</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetBookableItemsNoParticipant (5 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: basePrice exists and is a number</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: effectivePrice is ≥ 0 and equals basePrice</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: maxSpendablePoints.amount and amountCash are 0</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: awardedPoints.amount and amountCash are numbers</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetBookingAttemptNoParticipant (6 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: basePrice exists and is a number</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 10s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: effectivePrice is ≥ 0 and equals basePrice</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: maxSpendablePoints.amount and amountCash are exactly 0</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: awardedPoints.amount and amountCash are numbers</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetExperiencesNoPointParticipant (5 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: effectivePrice is ≥ 0 and equals basePrice</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: maxSpendablePoints.amount and amountCash are exactly 0</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: awardedPoints has amount and amountCash as numbers</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: At least one experience contains lowestPriceDetails</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetExperienceNoPointParticipant (5 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: basePrice exists and is a number</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: effectivePrice is ≥ 0 and equals basePrice</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: maxSpendablePoints.amount and amountCash are exactly 0</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: awardedPoints.amount and amountCash are numbers</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetBookableItemsNoPointParticipant (5 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: basePrice exists and is a number</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: effectivePrice is ≥ 0 and equals basePrice</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: maxSpendablePoints.amount and amountCash are 0</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: awardedPoints.amount and amountCash are numbers</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetBookingAttemptNoPointParticipant (6 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 10s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: basePrice exists and is a number</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: effectivePrice is ≥ 0 and equals basePrice</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: awardedPoints.amount and amountCash are numbers</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: maxSpendablePoints.amount and amountCash are exactly 0</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetExperiencesWithPointParticipant (6 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: basePrice exists and is a number</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: effectivePrice = basePrice - maxSpendablePoints.amountCash</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: maxSpendablePoints.amount and amountCash are ≥ 0</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: awardedPoints.amount and amountCash are numbers</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 6: basePrice exists and is a number</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetExperienceWithPointParticipant (5 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: basePrice exists and is a number</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: effectivePrice = basePrice - maxSpendablePoints.amountCash</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: maxSpendablePoints.amount and amountCash are ≥ 0</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: awardedPoints.amount and amountCash are numbers</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetBookableItemsWithPointParticipant (5 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: basePrice exists and is a number</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: effectivePrice = basePrice - maxSpendablePoints.amountCash</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: maxSpendablePoints.amount and amountCash are ≥ 0</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: awardedPoints.amount and amountCash are numbers</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetBookingAttemptWithPointParticipant (5 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: basePrice exists and is a number</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: effectivePrice = basePrice - maxSpendablePoints.amountCash</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: maxSpendablePoints.amount and amountCash are ≥ 0</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: awardedPoints.amount and amountCash are numbers</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetBookingAttempt (After Update) (14 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 10: Operator object should be valid</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 11: Operator name should be valid</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 12: Operator phone should be a non-empty string if present</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 13: Validate pax_mix array</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 14: Verify free cancellation</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 10s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: Response is an object</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: Response ID matches the stored UUID</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: Response contains bookingQuestions as an array</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 6: Response contains customer information</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 7: Verify availability and total price</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 8: Verify booking questions structure</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 9: Validate experience details</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 CreateBooking (5 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 15s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: Response is an object</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: 'status' property is a valid value</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: 'bookingId' is a valid number</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+            <div class="test-group" style="margin-bottom: 20px; border: 1px solid #28a745; border-radius: 8px; overflow: hidden;">
+              <div class="file-header" style="background: #28a745; color: white; padding: 10px; font-weight: bold;">
+                📁 GetUpsellTile (6 passed tests)
+              </div>
+              <div class="file-tests" style="padding: 10px;">
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 1: Status code is OK</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 2: Response time is below 5s</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 3: Response is an object</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 4: Response has non-empty 'title'</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 5: Response has numeric 'formattedPrice'</strong>
+                  </div>
+                
+                  <div class="test-item passed" style="margin-bottom: 8px; padding: 8px; background: #d4edda; border-left: 4px solid #28a745; border-radius: 4px;">
+                    <strong>Test 6: 'searchPageUrl' is a valid search URL</strong>
+                  </div>
+                
+              </div>
+            </div>
+          
+    </div>
+    
+    <script>
+        function downloadFile() {
+            const content = document.documentElement.outerHTML;
+            const blob = new Blob([content], { type: 'text/html' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'gRPC-Test-Report-Build-1396.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+        
+        function copyToClipboard() {
+            const content = document.documentElement.outerHTML;
+            navigator.clipboard.writeText(content).then(() => {
+                alert('HTML content copied to clipboard! Paste it into a .html file.');
+            }).catch(() => {
+                alert('Copy failed. Please manually select all content and copy.');
+            });
+        }
+    </script>
+</body>
+</html>
